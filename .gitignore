@@ -9,5 +9,5 @@
 *.inp
 *.inp
 /bin
-/OpenCVBuild
-/pt
+/*Build
+/YoloFiles

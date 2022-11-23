@@ -25,7 +25,8 @@ function onYouTubeIframeAPIReady() {
         onStateChange: onPlayerStateChange,
       },
     });
-  else player = new YT.Player("myVideo", {
+  else
+    player = new YT.Player("myVideo", {
       height: "100%",
       width: "100%",
       videoId: "kIEWJ1ljEro",
@@ -39,7 +40,22 @@ function onYouTubeIframeAPIReady() {
         onReady: onPlayerReady,
         onStateChange: onPlayerStateChange,
       },
-    });;
+    });
+  player = new YT.Player("myVideo", {
+    height: "100%",
+    width: "100%",
+    videoId: "FIqtCVE-U7w",
+    playerVars: {
+      playsinline: 1,
+      autoplay: 1,
+      loop: 1,
+      rel: 0,
+    },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
+  });
 }
 
 // 4. The API will call this function when the video player is ready.
