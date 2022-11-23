@@ -9,7 +9,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 function onYouTubeIframeAPIReady() {
-  if (getRandomInt(2) === 0)
+  /*if (getRandomInt(2) === 0)
     player = new YT.Player("myVideo", {
       height: "100%",
       width: "100%",
@@ -40,7 +40,7 @@ function onYouTubeIframeAPIReady() {
         onReady: onPlayerReady,
         onStateChange: onPlayerStateChange,
       },
-    });
+    });*/
   player = new YT.Player("myVideo", {
     height: "100%",
     width: "100%",
