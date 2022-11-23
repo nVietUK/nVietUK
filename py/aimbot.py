@@ -5,10 +5,9 @@ import cv2
 import math
 import time
 
-CONFIG_FILE = './yolov3.cfg'
-WEIGHT_FILE = './yolov3.weights'
+WEIGHT_FILE = '../pt/yolov7-w6.pt'
 
-net = cv2.dnn.readNetFromDarknet(CONFIG_FILE, WEIGHT_FILE)
+net = cv2.dnn.readfromDarknet(WEIGHT_FILE)
 #net.setPreferableBackend(cv.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
