@@ -1,3 +1,9 @@
 [submodule "yolov7"]
 	path = yolov7
 	url = https://github.com/WongKinYiu/yolov7.git
+[submodule "opencv_contrib"]
+	path = opencv_contrib
+	url = https://github.com/opencv/opencv_contrib.git
+[submodule "opencv"]
+	path = opencv
+	url = https://github.com/opencv/opencv.git
