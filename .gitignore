@@ -10,3 +10,4 @@
 *.inp
 /bin
 /OpenCVBuild
+/pt
