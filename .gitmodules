@@ -7,3 +7,24 @@
 [submodule "opencv"]
 	path = opencv
 	url = https://github.com/opencv/opencv.git
+[submodule "sccache"]
+	path = sccache
+	url = https://github.com/mozilla/sccache.git
+[submodule "libuv"]
+	path = libuv
+	url = https://github.com/libuv/libuv.git
+[submodule "llvm-project"]
+	path = llvm-project
+	url = https://github.com/llvm/llvm-project.git
+[submodule "pytorch"]
+	path = pytorch
+	url = https://github.com/pytorch/pytorch.git
+[submodule "magma"]
+	path = magma
+	url = https://bitbucket.org/icl/magma.git
+[submodule "oneMKL"]
+	path = oneMKL
+	url = https://github.com/oneapi-src/oneMKL.git
+[submodule "oneTBB"]
+	path = oneTBB
+	url = https://github.com/oneapi-src/oneTBB.git
