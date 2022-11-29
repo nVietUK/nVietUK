@@ -16,9 +16,6 @@
 [submodule "llvm-project"]
 	path = llvm-project
 	url = https://github.com/llvm/llvm-project.git
-[submodule "pytorch"]
-	path = pytorch
-	url = https://github.com/pytorch/pytorch.git
 [submodule "magma"]
 	path = magma
 	url = https://bitbucket.org/icl/magma.git
