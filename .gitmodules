@@ -28,3 +28,9 @@
 [submodule "oneTBB"]
 	path = oneTBB
 	url = https://github.com/oneapi-src/oneTBB.git
+[submodule "llvm"]
+	path = llvm
+	url = https://github.com/intel/llvm.git
+[submodule "perl5"]
+	path = perl5
+	url = https://github.com/Perl/perl5.git
