@@ -28,6 +28,21 @@
 [submodule "llvm"]
 	path = llvm
 	url = https://github.com/intel/llvm.git
+[submodule "ninja"]
+	path = ninja
+	url = https://github.com/ninja-build/ninja.git
+[submodule "re2c"]
+	path = re2c
+	url = https://github.com/skvadrik/re2c.git
+[submodule "vc-intrinsics"]
+	path = vc-intrinsics
+	url = https://github.com/intel/vc-intrinsics.git
 [submodule "perl5"]
 	path = perl5
 	url = https://github.com/Perl/perl5.git
+[submodule "gcc"]
+	path = gcc
+	url = git://gcc.gnu.org/git/gcc.git
+[submodule "nasm"]
+	path = nasm
+	url = https://github.com/netwide-assembler/nasm.git
