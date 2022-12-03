@@ -19,6 +19,7 @@
 [submodule "magma"]
 	path = magma
 	url = https://bitbucket.org/icl/magma.git
+	ignore = dirty
 [submodule "oneMKL"]
 	path = oneMKL
 	url = https://github.com/oneapi-src/oneMKL.git
@@ -34,9 +35,6 @@
 [submodule "re2c"]
 	path = re2c
 	url = https://github.com/skvadrik/re2c.git
-[submodule "vc-intrinsics"]
-	path = vc-intrinsics
-	url = https://github.com/intel/vc-intrinsics.git
 [submodule "perl5"]
 	path = perl5
 	url = https://github.com/Perl/perl5.git
@@ -46,3 +44,9 @@
 [submodule "pytorch"]
 	path = pytorch
 	url = https://github.com/pytorch/pytorch.git
+[submodule "lapack"]
+	path = lapack
+	url = https://github.com/Reference-LAPACK/lapack.git
+[submodule "flang"]
+	path = flang
+	url = https://github.com/flang-compiler/flang.git
