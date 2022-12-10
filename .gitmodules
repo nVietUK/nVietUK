@@ -47,6 +47,3 @@
 [submodule "flang"]
 	path = flang
 	url = https://github.com/flang-compiler/flang.git
-[submodule "SPIRV-Tools"]
-	path = SPIRV-Tools
-	url = https://github.com/KhronosGroup/SPIRV-Tools.git
