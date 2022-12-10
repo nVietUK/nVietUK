@@ -13,9 +13,6 @@
 [submodule "libuv"]
 	path = libuv
 	url = https://github.com/libuv/libuv.git
-[submodule "llvm-project"]
-	path = llvm-project
-	url = https://github.com/llvm/llvm-project.git
 [submodule "magma"]
 	path = magma
 	url = https://bitbucket.org/icl/magma.git
@@ -50,3 +47,6 @@
 [submodule "flang"]
 	path = flang
 	url = https://github.com/flang-compiler/flang.git
+[submodule "SPIRV-Tools"]
+	path = SPIRV-Tools
+	url = https://github.com/KhronosGroup/SPIRV-Tools.git
