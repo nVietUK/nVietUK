@@ -13,19 +13,12 @@
 [submodule "libuv"]
 	path = libuv
 	url = https://github.com/libuv/libuv.git
-[submodule "magma"]
-	path = magma
-	url = https://bitbucket.org/icl/magma.git
-	ignore = dirty
 [submodule "oneMKL"]
 	path = oneMKL
 	url = https://github.com/oneapi-src/oneMKL.git
 [submodule "oneTBB"]
 	path = oneTBB
 	url = https://github.com/oneapi-src/oneTBB.git
-[submodule "llvm"]
-	path = llvm
-	url = https://github.com/intel/llvm.git
 [submodule "ninja"]
 	path = ninja
 	url = https://github.com/ninja-build/ninja.git
@@ -44,6 +37,9 @@
 [submodule "lapack"]
 	path = lapack
 	url = https://github.com/Reference-LAPACK/lapack.git
-[submodule "flang"]
-	path = flang
-	url = https://github.com/flang-compiler/flang.git
+[submodule "llvm-project"]
+	path = llvm-project
+	url = https://github.com/llvm/llvm-project.git
+[submodule "magma-cuda"]
+	path = magma-cuda
+	url = https://github.com/nVietUK/magma-cuda.git
