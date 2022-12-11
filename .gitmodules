@@ -40,6 +40,7 @@
 [submodule "llvm-project"]
 	path = llvm-project
 	url = https://github.com/llvm/llvm-project.git
+	ignore = dirty
 [submodule "magma-cuda"]
 	path = magma-cuda
 	url = https://github.com/nVietUK/magma-cuda.git
