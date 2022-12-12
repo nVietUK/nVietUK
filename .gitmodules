@@ -28,9 +28,6 @@
 	path = perl5
 	url = https://github.com/Perl/perl5.git
 	branch = blead
-[submodule "gcc"]
-	path = gcc
-	url = git://gcc.gnu.org/git/gcc.git
 [submodule "pytorch"]
 	path = pytorch
 	url = https://github.com/pytorch/pytorch.git
