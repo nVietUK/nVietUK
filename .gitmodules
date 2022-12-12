@@ -4,9 +4,11 @@
 [submodule "opencv_contrib"]
 	path = opencv_contrib
 	url = https://github.com/opencv/opencv_contrib.git
+	branch = 5.x
 [submodule "opencv"]
 	path = opencv
 	url = https://github.com/opencv/opencv.git
+	branch = 5.x
 [submodule "libuv"]
 	path = libuv
 	url = https://github.com/libuv/libuv.git
