@@ -7,9 +7,6 @@
 [submodule "opencv"]
 	path = opencv
 	url = https://github.com/opencv/opencv.git
-[submodule "sccache"]
-	path = sccache
-	url = https://github.com/mozilla/sccache.git
 [submodule "libuv"]
 	path = libuv
 	url = https://github.com/libuv/libuv.git
@@ -37,10 +34,13 @@
 [submodule "lapack"]
 	path = lapack
 	url = https://github.com/Reference-LAPACK/lapack.git
-[submodule "llvm-project"]
-	path = llvm-project
-	url = https://github.com/llvm/llvm-project.git
-	ignore = dirty
 [submodule "magma-cuda"]
 	path = magma-cuda
 	url = https://github.com/nVietUK/magma-cuda.git
+[submodule "llvm"]
+	path = llvm
+	url = https://github.com/intel/llvm.git
+	branch = sycl
+[submodule "ccache"]
+	path = ccache
+	url = https://github.com/ccache/ccache.git
