@@ -10,7 +10,7 @@ cmake ^
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ^
     -DCUDA_ARCH_BIN=7.5^
     -DCUDA_FAST_MATH=ON^
-    -DOPENCV_EXTRA_MODULES_PATH=..\..\opencv_contrib\modules^
+    -DOPENCV_EXTRA_MODULES_PATH=a:\nvietuk\opencv_contrib\modules^
     -DENABLE_FAST_MATH=ON^
     -DOPENCV_DNN_CUDA=ON^
     -DWITH_CUDA=ON^
