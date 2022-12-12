@@ -27,12 +27,14 @@
 [submodule "perl5"]
 	path = perl5
 	url = https://github.com/Perl/perl5.git
+	branch = blead
 [submodule "gcc"]
 	path = gcc
 	url = git://gcc.gnu.org/git/gcc.git
 [submodule "pytorch"]
 	path = pytorch
 	url = https://github.com/pytorch/pytorch.git
+	branch = v1.13.1-rc1
 [submodule "lapack"]
 	path = lapack
 	url = https://github.com/Reference-LAPACK/lapack.git
