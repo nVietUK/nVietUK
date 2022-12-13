@@ -41,8 +41,8 @@
 [submodule "llvm"]
 	path = llvm
 	url = https://github.com/intel/llvm.git
-	ignoreSubmodules = dirty
 	branch = sycl
+	ignore = untracked
 [submodule "ccache"]
 	path = ccache
 	url = https://github.com/ccache/ccache.git
