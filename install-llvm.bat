@@ -1,4 +1,4 @@
-@call vcvarsall.bat x64 %*
+@echo off
 @call rmdir build\llvm /s
 @call mkdir build\llvm
 @call cd build\llvm
@@ -17,4 +17,3 @@ cmake ^
     -DLLVM_ENABLE_RUNTIMES="compiler-rt" ^
     ..\..\llvm\llvm
 @call cd ..\..
-pause

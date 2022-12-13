@@ -45,3 +45,4 @@
 [submodule "ccache"]
 	path = ccache
 	url = https://github.com/ccache/ccache.git
+	branch = master
