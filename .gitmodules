@@ -47,3 +47,6 @@
 	path = ccache
 	url = https://github.com/ccache/ccache.git
 	branch = master
+[submodule "sccache"]
+	path = sccache
+	url = https://github.com/mozilla/sccache.git
