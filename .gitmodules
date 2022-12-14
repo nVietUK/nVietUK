@@ -35,9 +35,6 @@
 [submodule "lapack"]
 	path = lapack
 	url = https://github.com/Reference-LAPACK/lapack.git
-[submodule "magma-cuda"]
-	path = magma-cuda
-	url = https://github.com/nVietUK/magma-cuda.git
 [submodule "llvm"]
 	path = llvm
 	url = https://github.com/intel/llvm.git
@@ -50,3 +47,6 @@
 [submodule "sccache"]
 	path = sccache
 	url = https://github.com/mozilla/sccache.git
+[submodule "magma"]
+	path = magma
+	url = https://nVietUK@bitbucket.org/icl/magma.git
