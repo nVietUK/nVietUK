@@ -10,6 +10,7 @@
 @call cd build\pytorch
 cmake ^
     -G "Visual Studio 17 2022" ^
+    -DCMAKE_CONFIGURATION_TYPES="Release"^
     -S ..\..\pytorch^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_PREFIX=C:\\pytorch ^

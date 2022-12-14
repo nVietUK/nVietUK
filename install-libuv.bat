@@ -4,6 +4,7 @@
 @call cd build\libuv
 cmake ^
     -G "Visual Studio 17 2022" ^
+    -DCMAKE_CONFIGURATION_TYPES="Release"^
     -S ..\..\libuv^
     -DCMAKE_INSTALL_PREFIX=C:\\libuv ^
     -DCMAKE_CXX_STANDARD=17 ^

@@ -4,6 +4,7 @@
 @call cd build\ninja
 cmake ^
     -G "Visual Studio 17 2022" ^
+    -DCMAKE_CONFIGURATION_TYPES="Release"^
     -S ..\..\ninja^
     -DCMAKE_INSTALL_PREFIX=C:\\ninja ^
     -DCMAKE_CXX_STANDARD=17 ^

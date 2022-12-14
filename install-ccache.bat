@@ -4,6 +4,7 @@
 @call cd build\ccache
 cmake ^
     -G "Visual Studio 17 2022" ^
+    -DCMAKE_CONFIGURATION_TYPES="Release"^
     -S ..\..\ccache^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_PREFIX=C:\\ccache ^
