@@ -4,8 +4,8 @@
 @call cd build\opencv
 cmake ^
     -G "Visual Studio 17 2022" ^
-    -DCMAKE_CONFIGURATION_TYPES="Release"^
-    -S ..\..\opencv
+    -D CMAKE_CONFIGURATION_TYPES:STRING=Release ^
+    -S ..\..\opencv ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_PREFIX=C:\\opencv ^
     -DCMAKE_CXX_STANDARD=17 ^
