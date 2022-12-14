@@ -47,6 +47,8 @@
 [submodule "sccache"]
 	path = sccache
 	url = https://github.com/mozilla/sccache.git
+	branch = main
 [submodule "magma"]
 	path = magma
 	url = https://nVietUK@bitbucket.org/icl/magma.git
+	ignore = dirty

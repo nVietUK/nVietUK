@@ -1,18 +1,22 @@
 @echo off
-@call rmdir build\magma-cuda /s
-@call mkdir build\magma-cuda
-@call cd build\magma-cuda
+@call rmdir build\magma /s
+@call mkdir build\magma
+
+@call cd magma 
+@call wsl -e echo -e 'BACKEND = cuda\nFORT = true' > make.inc
+@call wsl -e make generate GPU_TARGET=Turing
+@call cd ..
+
+@call cd build\magma
 @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 vs2022
 cmake ^
-    -G Ninja ^
+    -G "Visual Studio 17 2022" ^
     -D CMAKE_CONFIGURATION_TYPES:STRING=Release ^
-    -D CMAKE_TRY_COMPILE_CONFIGURATION:STRING=Release ^
-    -S ..\..\magma-cuda^
-    -DCMAKE_INSTALL_PREFIX=C:\\magma-cuda ^
-    -DCMAKE_CXX_STANDARD=17 ^
-    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ^
+    -S ..\..\magma^
+    -DCMAKE_INSTALL_PREFIX=C:\\magma ^
     -DMAGMA_ENABLE_CUDA=True ^
     -DCMAKE_CUDA_ARCHITECTURES=75 ^
-    -DGPU_TARGET=Turing 
-ninja install
+    -DGPU_TARGET=Turing ^
+    -D MKLROOT:STRING="C:\Program Files (x86)\Intel\oneAPI\mkl"
+cmake -S ..\..\magma
 @call cd ..\..
