@@ -36,7 +36,7 @@
                 <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="17" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="10" target="36">
+                <mxCell id="58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="36" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="10" value="pytorch&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
@@ -48,7 +48,7 @@
                 <mxCell id="53" value="" style="group;" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="200" y="420" width="200" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="magma" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=0;" parent="53" vertex="1">
+                <mxCell id="43" value="magma" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=0;" parent="53" vertex="1">
                     <mxGeometry width="120" height="60" as="geometry"/>
                 </mxCell>
                 <UserObject label="fortran" link="https://www.intel.com/content/www/us/en/developer/articles/tool/oneapi-standalone-components.html#fortran" id="46">
