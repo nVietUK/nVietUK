@@ -52,6 +52,3 @@
 	path = magma
 	url = https://nVietUK@bitbucket.org/icl/magma.git
 	ignore = dirty
-[submodule "MyChessAi"]
-	path = MyChessAi
-	url = https://github.com/nVietUK/UKiChessAI.git
