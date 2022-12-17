@@ -52,3 +52,9 @@
 	path = magma
 	url = https://nVietUK@bitbucket.org/icl/magma.git
 	ignore = dirty
+[submodule "UKiChessAI"]
+	path = UKiChessAI
+	url = https://github.com/nVietUK/UKiChessAI.git
+[submodule "neat-python"]
+	path = neat-python
+	url = https://github.com/CodeReclaimers/neat-python.git
