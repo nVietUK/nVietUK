@@ -6,7 +6,7 @@
 @call git submodule update --init magma
 
 @call cd magma 
-@call wsl -e echo -e BACKEND = cuda\nFORT = False > make.inc
+@call wsl -e echo -e BACKEND = cuda\nFORT = True > make.inc
 @call wsl -e make generate GPU_TARGET=Turing
 @call cd ..
 
@@ -22,6 +22,7 @@ cmake ^
     -D GPU_TARGET:STRING="Turing" ^
     -D OpenMP_C_FLAGS:STRING="-openmp:llvm" ^
     -D OpenMP_CXX_FLAGS:STRING="-openmp:llvm" ^
-    -D USE_FORTRAN:BOOL=OFF
+    -D USE_FORTRAN:BOOL=OFF ^
+    -D BUILD_SHARED_LIBS:BOOL=OFF
 cmake -S ..\..\magma
 @call cd ..\..
