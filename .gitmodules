@@ -35,11 +35,6 @@
 [submodule "lapack"]
 	path = lapack
 	url = https://github.com/Reference-LAPACK/lapack.git
-[submodule "llvm"]
-	path = llvm
-	url = https://github.com/intel/llvm.git
-	branch = sycl
-	ignore = dirty
 [submodule "ccache"]
 	path = ccache
 	url = https://github.com/ccache/ccache.git
