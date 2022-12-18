@@ -32,9 +32,6 @@
 	path = pytorch
 	url = https://github.com/pytorch/pytorch.git
 	branch = master
-[submodule "lapack"]
-	path = lapack
-	url = https://github.com/Reference-LAPACK/lapack.git
 [submodule "ccache"]
 	path = ccache
 	url = https://github.com/ccache/ccache.git
