@@ -31,7 +31,7 @@
 [submodule "pytorch"]
 	path = pytorch
 	url = https://github.com/pytorch/pytorch.git
-	branch = v1.13.1-rc1
+	branch = master
 [submodule "lapack"]
 	path = lapack
 	url = https://github.com/Reference-LAPACK/lapack.git
@@ -52,6 +52,7 @@
 	path = magma
 	url = https://nVietUK@bitbucket.org/icl/magma.git
 	ignore = dirty
+	branch = master
 [submodule "UKiChessAI"]
 	path = UKiChessAI
 	url = https://github.com/nVietUK/UKiChessAI.git

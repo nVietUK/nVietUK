@@ -17,12 +17,12 @@ cmake ^
     -D CMAKE_CONFIGURATION_TYPES:STRING="Release" ^
     -S ..\..\magma^
     -D CMAKE_INSTALL_PREFIX:STRING="C:\\magma" ^
-    -D MAGMA_ENABLE_CUDA:BOOL=OFF ^
+    -D MAGMA_ENABLE_CUDA:BOOL=ON ^
     -D CMAKE_CUDA_ARCHITECTURES:STRING="75" ^
     -D GPU_TARGET:STRING="Turing" ^
     -D OpenMP_C_FLAGS:STRING="-openmp:llvm" ^
     -D OpenMP_CXX_FLAGS:STRING="-openmp:llvm" ^
-    -D USE_FORTRAN:BOOL=OFF ^
+    -D USE_FORTRAN:BOOL=ON ^
     -D BUILD_SHARED_LIBS:BOOL=OFF
 cmake -S ..\..\magma
 @call cd ..\..

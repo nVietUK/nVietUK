@@ -1,27 +1,18 @@
 @echo off
 
+@call git submodule deinit -f pytorch
+@call git submodule update --init pytorch
+
 @call cd pytorch
-@call git submodules sync
-@call git submodules update --init --recursive
+@call git submodule sync
+@call git submodule update --init --recursive
 @call cd ..
 
-@call cd sccache
-@call cargo build --release --no-default-features
+@call sccache\target\release\sccache.exe --stop-server
+@call sccache\target\release\sccache.exe --start-server
+
+@call vcvarsall.bat x64
+@call cd pytorch
+rem @call python -m venv install-pytorch
+@call python setup.py install --cmake
 @call cd ..
-
-@call sccache --stop-server
-@call sccache --start-server
-
-@call rmdir build\pytorch /s
-@call mkdir build\pytorch
-@call cd build\pytorch
-cmake ^
-    -G "Visual Studio 17 2022" ^
-    -D CMAKE_CONFIGURATION_TYPES:STRING=Release ^
-    -D CMAKE_TRY_COMPILE_CONFIGURATION:STRING=Release ^
-    -S ..\..\pytorch^
-    -DCMAKE_BUILD_TYPE=Release ^
-    -DCMAKE_INSTALL_PREFIX=C:\\pytorch ^
-    -DCMAKE_CXX_STANDARD=17 ^
-    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON 
-@call cd ..\..

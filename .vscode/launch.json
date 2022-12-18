@@ -5,12 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Current File",
+      "name": "Install pytorch debug",
       "type": "python",
       "request": "launch",
       "program": "${file}",
+      "args": ["install", "--cmake"],
+      "cwd": "${workspaceFolder}",
       "console": "internalConsole",
-      "justMyCode": true
+      "justMyCode": false
     },
     {
       "name": "Terminal",
