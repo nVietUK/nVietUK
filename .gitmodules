@@ -12,12 +12,6 @@
 [submodule "libuv"]
 	path = libuv
 	url = https://github.com/libuv/libuv.git
-[submodule "oneMKL"]
-	path = oneMKL
-	url = https://github.com/oneapi-src/oneMKL.git
-[submodule "oneTBB"]
-	path = oneTBB
-	url = https://github.com/oneapi-src/oneTBB.git
 [submodule "ninja"]
 	path = ninja
 	url = https://github.com/ninja-build/ninja.git
