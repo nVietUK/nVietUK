@@ -1,5 +1,21 @@
 @echo off
-@call rmdir build\opencv /s
+@call .bat/install-ccache.bat
+@call git submodule deinit -f opencv
+@call git submodule deinit -f opencv_contrib
+@call git submodule update --init opencv
+@call git submodule update --init opencv_contrib
+
+@call cd opencv
+@call git checkout 5.x
+@call git pull
+@call cd ..
+
+@call cd opencv_contrib
+@call git checkout 5.x
+@call git pull
+@call cd ..
+
+@call rmdir build\opencv /s /q
 @call mkdir build\opencv
 @call cd build\opencv
 cmake ^
@@ -16,6 +32,9 @@ cmake ^
     -DENABLE_FAST_MATH=ON^
     -DOPENCV_DNN_CUDA=ON^
     -DWITH_CUDA=ON^
-    -DENABLE_CCACHE=ON
+    -DENABLE_CCACHE=ON^
+    -D CCACHE_PROGRAM:FILEPATH="C:\ccache\bin\ccache.exe"
 cmake -S ..\..\opencv
+rem msbuild INSTALL.vcxproj -p:Configuration=Release
+pause
 @call cd ..\..

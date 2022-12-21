@@ -5,13 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Install pytorch debug",
+      "name": "run Engine",
       "type": "python",
       "request": "launch",
-      "program": "${file}",
-      "args": ["install", "--cmake"],
-      "cwd": "${workspaceFolder}",
-      "console": "internalConsole",
+      "program": "${workspaceFolder}/NEATChessEngine/NEATChessEngine.py",
+      //"program": "${workspaceFolder}/UKiChessEngine/lichessbot.py",
+      "cwd": "${workspaceFolder}/NEATChessEngine",
+      "console": "integratedTerminal",
       "justMyCode": false
     },
     {

@@ -1,11 +1,13 @@
 @echo off
-@call rmdir build\magma /s
+@call rmdir build\magma /s /q
 @call mkdir build\magma
 
 @call git submodule deinit -f magma
 @call git submodule update --init magma
 
 @call cd magma 
+@call git checkout master
+@call git pull
 @call wsl -e echo -e BACKEND = cuda\nFORT = True > make.inc
 @call wsl -e make generate GPU_TARGET=Turing
 @call cd ..
@@ -25,4 +27,6 @@ cmake ^
     -D USE_FORTRAN:BOOL=ON ^
     -D BUILD_SHARED_LIBS:BOOL=OFF
 cmake -S ..\..\magma
+rem msbuild INSTALL.vcxproj -p:Configuration=Release -maxCpuCount:2 -flp:FileLogger,Microsoft.Build;logfile=..\..\magma.log;append=false
+pause
 @call cd ..\..
