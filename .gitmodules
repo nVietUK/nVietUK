@@ -31,11 +31,6 @@
 	path = sccache
 	url = https://github.com/mozilla/sccache.git
 	branch = main
-[submodule "magma"]
-	path = magma
-	url = https://nVietUK@bitbucket.org/icl/magma.git
-	ignore = dirty
-	branch = master
 [submodule "pygame"]
 	path = pygame
 	url = https://github.com/pygame/pygame.git
