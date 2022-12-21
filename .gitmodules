@@ -9,9 +9,6 @@
 	path = opencv
 	url = https://github.com/opencv/opencv.git
 	branch = 5.x
-[submodule "libuv"]
-	path = libuv
-	url = https://github.com/libuv/libuv.git
 [submodule "ninja"]
 	path = ninja
 	url = https://github.com/ninja-build/ninja.git
@@ -39,9 +36,9 @@
 	url = https://nVietUK@bitbucket.org/icl/magma.git
 	ignore = dirty
 	branch = master
-[submodule "UKiChessAI"]
-	path = UKiChessAI
-	url = https://github.com/nVietUK/UKiChessAI.git
-[submodule "neat-python"]
-	path = neat-python
-	url = https://github.com/CodeReclaimers/neat-python.git
+[submodule "pygame"]
+	path = pygame
+	url = https://github.com/pygame/pygame.git
+[submodule "UKiChessEngine"]
+	path = UKiChessEngine
+	url = https://github.com/nVietUK/UKiChessEngine.git
