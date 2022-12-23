@@ -28,3 +28,9 @@
 	path = cpython
 	url = https://github.com/python/cpython.git
 	branch = mainx
+	ignore = dirty
+[submodule "tensorflow"]
+	path = tensorflow
+[submodule "CSGO-AI"]
+	path = CSGO-AI
+	url = https://github.com/nVietUK/CSGO-AI.git
