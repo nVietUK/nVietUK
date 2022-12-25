@@ -1,14 +1,18 @@
-git submodule deinit -f gcc 
-git submodule update --init gcc 
-git submodule deinit -f TensorRT
-git submodule update --init TensorRT
+# git submodule deinit -f TensorRT
+# git submodule update --init TensorRT
 
-cd gcc 
-git checkout releases/gcc-10.4.0
-git pull
+mkdir bin
+wget -O bin/gcc.tar.gz https://mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-10.4.0/gcc-10.4.0.tar.gz
+rm gcc -fr
+tar -xf bin/gcc.tar.gz 
 
-./configure --host=x86_64-pc-linux-gnu
-make BOOT_CFLAGS='-O' bootstrap
+cd gcc-10.4.0
+./contrib/download_prerequisites
+rm ../build/gcc -fr
+mkdir ../build/gcc
+cd ../build/gcc
+../../gcc-10.4.0/configure
+make
 cd objdir && make install && cd ..
 cd ..
 
