@@ -40,3 +40,10 @@
 [submodule "gcc"]
 	path = gcc
 	url = git://gcc.gnu.org/git/gcc.git
+[submodule "NEATChessEngine"]
+	path = NEATChessEngine
+	url = https://github.com/nVietUK/NEATChessEngine.git
+[submodule "hdf5"]
+	path = hdf5
+	url = https://github.com/HDFGroup/hdf5.git
+	branch = hdf5_1_14_0
