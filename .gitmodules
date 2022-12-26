@@ -31,9 +31,6 @@
 	ignore = dirty
 [submodule "tensorflow"]
 	path = tensorflow
-[submodule "CSGO-AI"]
-	path = CSGO-AI
-	url = https://github.com/nVietUK/CSGO-AI.git
 [submodule "TensorRT"]
 	path = TensorRT
 	url = https://github.com/NVIDIA/TensorRT.git
