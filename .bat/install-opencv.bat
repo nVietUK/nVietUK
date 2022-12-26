@@ -36,5 +36,7 @@ cmake ^
     -D CCACHE_PROGRAM:FILEPATH="C:\ccache\bin\ccache.exe"
 cmake -S ..\..\opencv
 rem msbuild INSTALL.vcxproj -p:Configuration=Release
-pause
+@call copy ..\..\opencv_fix\tiffconf.h 3rdparty\libtiff\tiffconf.h /y
+@call copy ..\..\opencv_fix\tif_config.h 3rdparty\libtiff\tif_config.h /y
+@call copy ..\..\opencv_fix\jconfigint.h 3rdparty\libjpeg-turbo\jconfigint.h /y
 @call cd ..\..
