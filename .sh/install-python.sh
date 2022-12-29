@@ -1,4 +1,4 @@
-sudo apt install git build-essential zlibc
+sudo apt install git build-essential zlibc zlib1g-dev
 git submodule deinit -f cpython
 git submodule update --init cpython
 cd cpython 
