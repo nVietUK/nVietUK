@@ -24,7 +24,6 @@ cmake ^
     -S ..\..\opencv ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_PREFIX=C:\\opencv ^
-    -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ^
     -DCUDA_ARCH_BIN=7.5^
     -DCUDA_FAST_MATH=ON^

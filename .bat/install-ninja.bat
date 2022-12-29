@@ -8,6 +8,5 @@ cmake ^
     -D CMAKE_TRY_COMPILE_CONFIGURATION:STRING=Release ^
     -S ..\..\ninja^
     -DCMAKE_INSTALL_PREFIX=C:\\ninja ^
-    -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON 
 @call cd ..\..

@@ -1,30 +1,27 @@
-# git submodule deinit -f TensorRT
-# git submodule update --init TensorRT
+read -p "Reinstall? (Y/n)" yn
 
-mkdir bin
-wget -O bin/gcc.tar.gz https://mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-10.4.0/gcc-10.4.0.tar.gz
-rm gcc -fr
-tar -xf bin/gcc.tar.gz 
+case $yn in 
+	[nN] ) ;;
+	* ) 
+		git submodule deinit -f TensorRT;
+		git submodule update --init TensorRT;
 
-cd gcc-10.4.0
-./contrib/download_prerequisites
-rm ../build/gcc -fr
-mkdir ../build/gcc
-cd ../build/gcc
-../../gcc-10.4.0/configure
-make
-cd objdir && make install && cd ..
-cd ..
+		cd TensorRT;
+		git checkout main;
+		git pull ;
+		git submodule update --init;
+		cd parsers/onnx;
+		git submodule update --init;
+		cd ../..;
+		cd ..;
+esac
 
-cd TensorRT
-git checkout origin/release/8.5
-git pull 
-cd ..
-
+export TRT_LIBPATH=`pwd`/TensorRT
 cd build
 rm tensorRT -fr
 mkdir -p tensorRT && cd tensorRT
-cmake ../../TensorRT -DTRT_LIB_DIR=../../TensorRT\lib -DTRT_BIN_DIR=`pwd`/out \
+cmake ../../TensorRT \
 	-DCUDA_VERSION=11.8 -DGPU_ARCHS="75" -DCMAKE_CUDA_ARCHITECTURES="75" \
-	-DCMAKE_CUDA_COMPILER="/usr/local/cuda/bin/nvcc"
-make && sudo make install
+	-DCMAKE_CUDA_COMPILER="/usr/local/cuda/bin/nvcc" -DCMAKE_CUDA_FLAGS="-allow-unsupported-compiler" \
+	-DTRT_LIB_DIR=$TRT_LIBPATH/lib/ -DTRT_INC_DIR=$TRT_LIBPATH/include -DTRT_OUT_DIR=`pwd`/out
+make -j 100 && sudo make install
