@@ -17,9 +17,10 @@ case $yn in
         .sh/install-tensorRT.sh $1
 esac
 
-curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
-sudo npm install -g @bazel/bazelisk
+apt install -y curl
+curl -fsSL https://deb.nodesource.com/setup_19.x | bash - && \
+apt-get install -y nodejs
+npm install -g @bazel/bazelisk
 pip install numpy
 
 cd tensorflow
