@@ -31,9 +31,11 @@
 	ignore = dirty
 [submodule "tensorflow"]
 	path = tensorflow
+	url = https://github.com/tensorflow/tensorflow.git
 [submodule "TensorRT"]
 	path = TensorRT
 	url = https://github.com/NVIDIA/TensorRT.git
+	ignore = dirty
 [submodule "gcc"]
 	path = gcc
 	url = git://gcc.gnu.org/git/gcc.git

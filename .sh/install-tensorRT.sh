@@ -14,7 +14,6 @@ case $yn in
 
 		cd TensorRT;
 		git checkout ${TRT_VERSION};
-		git pull tags ${TRT_VERSION};
 		git submodule update --init;
 		cd parsers/onnx;
 		git submodule update --init;
@@ -60,4 +59,4 @@ cmake ../../TensorRT \
 	-DCUDA_VERSION=11.8 -DGPU_ARCHS="75" -DCMAKE_CUDA_ARCHITECTURES="75" \
 	-DCMAKE_CUDA_COMPILER="/usr/local/cuda/bin/nvcc" -DCMAKE_CUDA_FLAGS="-allow-unsupported-compiler" \
 	-DTRT_LIB_DIR=$TRT_LIBPATH/lib/ -DTRT_INC_DIR=$TRT_LIBPATH/include -DTRT_OUT_DIR=`pwd`/out
-make -j 1 && sudo make install
+make -j 50 && sudo make install
