@@ -1,5 +1,8 @@
 FROM ubuntu:focal
 
+ENV TZ=Asia/Ho_Chi_Minh
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN apt update && \
     apt upgrade && \
     apt install -y git && \
@@ -7,5 +10,5 @@ RUN apt update && \
     cd nVietUK/ && \
     chmod +x .sh/install-tensorflow.sh && \
     chmod +x .sh/install-tensorRT.sh && \
-    chmod +x .sh/install-python.sh && \
-    .sh/install-tensorflow.sh
+    chmod +x .sh/install-python.sh
+RUN cd nVietUK/ && .sh/install-tensorflow.sh -f
