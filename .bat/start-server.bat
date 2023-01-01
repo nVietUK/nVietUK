@@ -1,3 +1,1 @@
-docker run -d -v :/data \
-    -e TYPE=PAPER \
-    -p 25565:25565 -e EULA=TRUE --name mc itzg/minecraft-server
+docker run -d -v %cd%\mcserver:/data -e TYPE=PAPER -p 25565:25565 -e EULA=TRUE --name mc itzg/minecraft-server
