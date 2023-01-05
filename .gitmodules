@@ -45,6 +45,3 @@
 [submodule ".cpp"]
 	path = .cpp
 	url = https://github.com/nVietUK/.cpp.git
-[submodule "mcserver"]
-	path = mcserver
-	url = https://github.com/nVietUK/mcserver.git
