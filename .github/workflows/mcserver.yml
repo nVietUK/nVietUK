@@ -5,6 +5,8 @@ jobs:
   my_job:
     name: start minecraft server
     runs-on: ubuntu-18.04
+    env:
+      NGROK_TOKEN : ${{ secrets.NGROK_TOKEN }}
     steps:
       - name: 'Set up latest Oracle JDK 17'
         uses: oracle-actions/setup-java@v1
@@ -17,5 +19,14 @@ jobs:
           path: './paperclip.jar'
       - name: 'Accepting EULA'
         run: echo "eula=true" > eula.txt
+      - name: update and upgrade
+        run: sudo apt-get update -y && sudo apt-get upgrade -y
+        
+      - name: ngrok-tunnel
+        uses: vmactions/ngrok-tunnel@v0.0.1
+        with:
+          protocol: tcp
+          port: 25565
+        
       - name: 'Deploy server'
         run: nohup java -jar ./paperclip.jar &
