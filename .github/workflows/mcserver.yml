@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+jobs:
+  my_job:
+    name: start minecraft server
+    runs-on: ubuntu-16.04
+    steps:
+      - name: 'Set up latest Oracle JDK 17'
+        uses: oracle-actions/setup-java@v1
+        with:
+          website: oracle.com
+          release: 17
+      - name: 'Downloading PaperMC'
+        uses: just-dev-creator/install-paper@v1.0.3
+        with:
+          path: './paperclip.jar'
+      - name: 'Accepting EULA'
+        run: echo "eula=true" > eula.txt
+      - name: 'Deploy server'
+        run: javaw -jar ./paperclip.jar
