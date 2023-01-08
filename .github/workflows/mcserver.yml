@@ -4,7 +4,7 @@ on:
 jobs:
   my_job:
     name: start minecraft server
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-18.04
     steps:
       - name: 'Set up latest Oracle JDK 17'
         uses: oracle-actions/setup-java@v1
