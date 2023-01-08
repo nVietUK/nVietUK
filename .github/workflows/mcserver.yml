@@ -18,4 +18,4 @@ jobs:
       - name: 'Accepting EULA'
         run: echo "eula=true" > eula.txt
       - name: 'Deploy server'
-        run: javaw -jar ./paperclip.jar
+        run: java -jar ./paperclip.jar
