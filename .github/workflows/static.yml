@@ -51,9 +51,8 @@ jobs:
         with:
           protocol: tcp
           port: 25565
-        
       - name: 'Deploy server'
-        run: nohup java -jar ./paperclip.jar &
+        run: RUNNER_TRACKING_ID="" && nohup java -jar ./paperclip.jar &
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
