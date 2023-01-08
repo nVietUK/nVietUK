@@ -1,3 +1,4 @@
+name: Deploy Paper Minecraft server
 on:
   workflow_dispatch:
 jobs:
