@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Khởi chạy host web
+name: Khởi chạy host
 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -22,6 +22,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      NGROK_TOKEN : ${{ secrets.NGROK_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,6 +35,25 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: 'Set up latest Oracle JDK 17'
+        uses: oracle-actions/setup-java@v1
+        with:
+          website: oracle.com
+          release: 17
+      - name: 'Downloading PaperMC'
+        uses: just-dev-creator/install-paper@v1.0.3
+        with:
+          path: './paperclip.jar'
+      - name: 'Accepting EULA'
+        run: echo "eula=true" > eula.txt
+      - name: ngrok-tunnel
+        uses: vmactions/ngrok-tunnel@v0.0.1
+        with:
+          protocol: tcp
+          port: 25565
+        
+      - name: 'Deploy server'
+        run: nohup java -jar ./paperclip.jar &
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
